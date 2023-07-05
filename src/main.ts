@@ -3,15 +3,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
 
+import { ProductsComponent } from './components/products/products.component';
+
 @Component({
   selector: 'my-app',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProductsComponent],
   template: `
     <h1>Hello from {{name}}!</h1>
-    <a target="_blank" href="https://angular.io/start">
-      Learn more about Angular 
-    </a>
+    <app-products></app-products>
   `,
 })
 export class App {
